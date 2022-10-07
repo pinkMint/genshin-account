@@ -199,7 +199,7 @@ namespace GenshinAccount
             }
             else
             {
-                if (YuanShenIsRunning())
+                if (YuanShenIsRunning() && !chkCheckGame.Checked)
                 {
                     MessageBox.Show("原神正在运行，请先关闭原神进程后再试！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -278,7 +278,7 @@ namespace GenshinAccount
             }
             if (!autoRestart)
             {
-                if (YuanShenIsRunning())
+                if (YuanShenIsRunning() && !chkCheckGame.Checked)
                 {
                     MessageBox.Show("原神正在运行，请先关闭原神进程后再切换账号！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -287,7 +287,7 @@ namespace GenshinAccount
 
             if (chkSkipTips.Checked || MessageBox.Show($"是否要切换为[{name}]", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (autoRestart)
+                if (autoRestart && !chkCheckGame.Checked)
                 {
                     var pros = Process.GetProcessesByName("YuanShen");
                     if (pros.Any())
@@ -425,6 +425,7 @@ namespace GenshinAccount
             if (WindowState == FormWindowState.Minimized && notifyIcon.Visible)
             {
                 this.ShowInTaskbar = false;
+                this.Hide();
             }
         }
 
@@ -436,6 +437,7 @@ namespace GenshinAccount
                 this.ShowInTaskbar = true;
                 //notifyIcon.Visible = false;
             }
+            this.Show();
             this.Activate();
         }
 

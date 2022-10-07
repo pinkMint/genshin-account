@@ -57,6 +57,7 @@
             this.txtDllPath = new System.Windows.Forms.TextBox();
             this.chkInjectDll = new System.Windows.Forms.CheckBox();
             this.btnStartGame = new System.Windows.Forms.Button();
+            this.chkCheckGame = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHelpSatrtParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -233,10 +234,19 @@
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
+            // chkCheckGame
+            // 
+            resources.ApplyResources(this.chkCheckGame, "chkCheckGame");
+            this.chkCheckGame.Checked = true;
+            this.chkCheckGame.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCheckGame.Name = "chkCheckGame";
+            this.chkCheckGame.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chkCheckGame);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.chkInjectDll);
             this.Controls.Add(this.txtDllPath);
@@ -298,6 +308,7 @@
         private System.Windows.Forms.TextBox txtDllPath;
         private System.Windows.Forms.CheckBox chkInjectDll;
         private System.Windows.Forms.Button btnStartGame;
+        private System.Windows.Forms.CheckBox chkCheckGame;
     }
 }
 
