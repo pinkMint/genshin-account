@@ -7,7 +7,7 @@
 自己编译
 
 ## 截图
-![Screenshot](https://raw.githubusercontent.com/babalae/genshin-account/main/Document/Screenshot.png)
+![Screenshot](https://github.com/pinkMint/genshin-account/blob/main/Document/1.png)
 
 ## 使用方法
 
